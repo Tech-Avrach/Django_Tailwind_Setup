@@ -32,9 +32,9 @@ Ensure you have the following installed on your development machine:
 
 Begin by installing Tailwind CSS and its dependencies via npm:
 
-\`\`\`bash
+```bash
 npm install -D tailwindcss postcss autoprefixer
-\`\`\`
+```
 
 Initialize Tailwind CSS by creating the configuration files:
 
