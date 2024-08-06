@@ -38,15 +38,15 @@ npm install -D tailwindcss postcss autoprefixer
 
 Initialize Tailwind CSS by creating the configuration files:
 
-\`\`\`bash
+```bash
 npx tailwindcss init
-\`\`\`
+```
 
 ### 2. Configure Tailwind CSS
 
 Edit the `tailwind.config.js` file to specify the paths to all of your template files:
 
-\`\`\`javascript
+```javascript
 module.exports = {
   content: [
     './templates/**/*.html',
@@ -58,18 +58,18 @@ module.exports = {
   },
   plugins: [],
 }
-\`\`\`
+```
 
 ### 3. Hot Reloading Setup
 
 Set up hot reloading with Tailwind by adding the following scripts in your `package.json`:
 
-\`\`\`json
+```json
 "scripts": {
   "build": "tailwindcss -i ./static/src/input.css -o ./static/dist/output.css --minify",
   "watch": "tailwindcss -i ./static/src/input.css -o ./static/dist/output.css --watch"
 }
-\`\`\`
+```
 
 Run \`npm run watch\` to enable hot reloading.
 
@@ -80,15 +80,15 @@ To apply Tailwind CSS styles to Django Admin, follow these steps:
 1. Create a custom `admin.css` file in your static directory.
 2. Add the Tailwind directives to your `admin.css` file:
 
-\`\`\`css
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-\`\`\`
+```
 
 3. Configure Django to use this custom CSS file in the Admin interface by overriding the default `AdminSite`:
 
-\`\`\`python
+```python
 from django.contrib.admin import AdminSite
 
 class CustomAdminSite(AdminSite):
@@ -98,7 +98,7 @@ class CustomAdminSite(AdminSite):
         }
 
 admin_site = CustomAdminSite(name='custom_admin')
-\`\`\`
+```
 
 ## Running the Project
 
@@ -106,15 +106,15 @@ Use the following commands to build and run your project:
 
 1. Build the Tailwind CSS:
 
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+```
 
 2. Run the Django development server:
 
-\`\`\`bash
+```bash
 python manage.py runserver
-\`\`\`
+```
 
 ## Conclusion
 
